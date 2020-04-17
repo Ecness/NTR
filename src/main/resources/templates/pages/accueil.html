@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="module/common :: headFragment"></head>
+
+<body>
+	<nav th:replace="module/common :: navFragment"></nav>
+		
+	<div class="container">
+		<fieldset>
+			<div th:if="${moduleActif?.moduleAccueil}?" th:replace="module/accueil :: ${moduleActif?.moduleAccueil}? fragment-accueil : 'fragment-blanck'"></div>
+		</fieldset>	
+	</div>
+</body>
+</html>
